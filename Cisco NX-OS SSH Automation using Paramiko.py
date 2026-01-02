@@ -9,7 +9,7 @@ ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
 # =========Device Details=========
 
-Host = "X.X.X.X" # Enter device IP address.
+host = input("Enter device IP address: ").strip() # Enter device IP address.
 username = "admin"
 password = getpass("enter your passowrd : ")
 port = 22
@@ -49,3 +49,4 @@ output = shell.recv(65535).decode()
 print(output)
 
 ssh.close()
+
